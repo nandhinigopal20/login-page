@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 500px;
+        background-color: lightseagreen;
+    }
+
+    .container {
+        position: relative;
+        top: 100px;
+        left: 10px;
+        width: 100vh;
+        height: 300px;
+        padding: 50px;
+        background-color: mediumaquamarine;
+        border: 1px solid lightgrey;
+    }
+
+    header {
+        text-align: center;
+        font-size: 50px;
+        font-weight: 800;
+        border-bottom: 1px solid lightgrey;
+    }
+
+    .fields {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .fields input {
+        width: 40%;
+        height: 30px;
+        margin-left: 20px;
+    }
+
+    button {
+        margin: 20px;
+        width: 20%;
+        height: 50px;
+        border-radius: 5px;
+        font-size: 25px;
+        font-weight: 800;
+        border: none;
+        background-color: lightseagreen;
+        cursor: pointer;
+    }
+
+    #password {
+        margin-left: 30px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <header>Login</header>
+        <div class="fields">
+            First Name <input type="text" name="fname" id="fname" placeholder="First Name" required>
+        </div>
+        <div class="fields">
+            Last Name <input type="text" name="lname" id="lname" placeholder="Last Name" required>
+        </div>
+        <div class="fields">
+            Password <input type="password" name="password" id="password" placeholder="Password" required>
+        </div>
+        <div class="fields">
+            <button type="button" id="submit">submit</button>
+        </div>
+    </div>
+</body>
+<script>
+    var fname = document.getElementById("fname");
+    var lname = document.getElementById("lname");
+    var password = document.getElementById("password");
+
+    var submitBtn = document.querySelector("#submit");
+    var array = [];
+
+    submitBtn.addEventListener("click", function (event) {
+        var fnamevalue = fname.value;
+        var lnamevalue = lname.value;
+        var passwordvalue = password.value;
+
+        var obj = {};
+        obj.firstname = fnamevalue;
+        obj.lastname = lnamevalue;
+        obj.password = passwordvalue;
+
+
+        array.push(obj);
+
+
+       var length= array.length;
+       if(length<=5){
+        alert(length);
+        
+
+    }else{
+     array.forEach(function (i,e) {
+       var  arraycopy=array[e]
+    })
+    }
+    
+    console.log(arraycopy)
+    })
+
+</script>
+
+</html>
